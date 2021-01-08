@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e9ebed"
+    tools:context=".SearchListActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/item_gap"
+            android:src="@drawable/logout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/label_text_size"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/iv_logout"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_user_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subscriber_list"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="2dp"
+        android:layout_below="@+id/top_title"
+        android:layout_marginTop="@dimen/list_activity_margin"
+        android:layout_marginLeft="@dimen/list_activity_margin"
+        android:layout_marginRight="@dimen/list_activity_margin"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/label_text_size"
+        android:textStyle="bold"/>
+
+    <include
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="@dimen/list_activity_margin"
+        android:layout_marginRight="@dimen/list_activity_margin"
+        android:layout_below="@id/tv_user_number"
+        android:layout="@layout/list_search_item"
+        android:divider="#e9ebed"
+        layout="@layout/list_search_header">
+    </include>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="@dimen/list_activity_margin"
+        android:layout_marginRight="@dimen/list_activity_margin"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/list_header">
+
+    </View>
+
+    <ListView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_activity_margin"
+        android:layout_marginRight="@dimen/list_activity_margin"
+        android:layout_marginBottom="@dimen/list_activity_margin"
+        android:layout_below="@+id/divider"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:divider="#e9ebed"
+        android:dividerHeight="2dp">
+    </ListView>
+
+
+</RelativeLayout>
